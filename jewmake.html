@@ -1,0 +1,390 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body {
+background-position:center center;
+height:100vh;
+font-family:Arival;
+font-weight:200;
+font-size:16px
+}
+
+a {
+text-decoration:none;
+}
+
+header {
+height:30px;
+width:100%;
+background-color:#778899;
+border-radius:3px;
+margin:30px 0px;
+display:-webkit-flex;
+display:-moz-flex;
+display:-ms-flex;
+display:-o-flex;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:30px  50px;
+}
+
+
+.nav-area {
+list-style:none;
+}
+
+.nav-area li {
+display:inline-block;
+padding:0 20px;
+text-transform:uppercase;
+}
+
+.nav-area li a {
+transition:3s;
+color:#fff;
+}
+
+.nav-area li a:hover{
+color:#000080;
+}
+
+.nav-area.a active {
+background-color:#000000;
+color:black;
+}
+
+.btn-area {
+cursor:pointer;
+color:#fff;
+font-size:16px;
+letter-spacing:2px;
+text-transform:uppercase;
+padding:10px 30px;
+border-radius:5px;
+background:#A52A2A;
+}
+
+@media screen and (max-width:600px) {
+nav-area  {position:relative;}
+nav-area.icon {
+position:absolute;
+right:0;
+top:0;
+}
+
+nav-area a{
+folat:none;
+display:block;
+text-align:left;
+}
+}
+
+
+
+{
+box-sizing:border-box;
+}
+
+body,html {
+height:100%;
+margin:0;
+padding:0;
+font-family:arial;
+}
+
+
+.banner-img  {
+background-image:url(im6.jpg);
+-webkit-background-size:cover;
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+height:100%;
+filter:blur(5px);
+}
+
+.banner-text {
+position:absolute;
+top:50%;
+left:50%;
+transform:translate (-50%, -50%);
+z-index:5;
+width:45%;
+padding:40px 0;
+text-align:justify;
+border-top-left-radius:70px;
+background-color:rgba(0,0,0,0.3);
+color:#fff;
+font-weight:bold;
+border:10px inset #fff;
+}
+
+.banner-text p{
+padding:0 8%;
+font-family:merienda;
+font-size:20px;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<header>
+	<nav>
+	  <ul class="nav-area">
+	  <li><a href="index.html"><b>Home</b></a></li>
+	  <li><a href="index.html"><b>Jewelary</b></a></li>
+	  <li><a href="offer.html"><b>Offers</b></a></li>
+	  <li><a href="services.html"><b>Service</b></a></li>
+	  <li><a href="About us.html"><b>About</b></a></li>
+	  </ul>
+	  </nav>
+	  </header>
+
+
+<div class="banner-img"></div>
+
+<div class="banner-text">
+  <h1 style="text-align:center; color:yellow;"><em>JEWELLERY MAKEING</em></h1>
+  <p> Sigiri Jewellers can reliably make the jewellery you need at reasonable prices...</p>
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+*{
+margin:0;
+padding:0;
+font-family:Arial;
+box-sizing:border-box;
+}
+
+.footer{
+width:100%;
+position:absolute;
+bottom:0;
+background:#333;
+color:#fff;
+padding:100px 0 30px;
+border-top-left-radius:125px;
+font-size:13px;
+line-height:20px;
+}
+
+.row {
+width:85%;
+margin:auto;
+display:flex;flex-wrap:wrap;
+align-items:flex-start;
+justify-content:space-between;
+}
+
+.col {
+flex-basis:20%;
+padding:10px;
+}
+
+.col:nth-child(2),.col:nth-child(3){
+flex-basis:15%;
+}
+
+.col h3 {
+width:fit-content;
+margin-bottom:40px;
+position:relative;
+}
+
+ul li {
+list-style:none;
+margin-bottom:12px;
+}
+
+ul li a {
+text-decoration:none;
+color:#000000;
+}
+
+form {
+padding-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid #ccc;
+margin-bottom:50px;
+}
+
+form input {
+width:100%;
+background:transparent;
+color:#ccc;
+border:0;
+outline:none;
+}
+
+form button {
+background:transparent;
+border:0;
+outline:none;
+cursor:pointer;
+}
+
+form button .fas{
+font-size:15px;
+color:#ccc;
+}
+
+social-icons {
+ margin-top:30px;
+}
+
+.social-icons i {
+ font-size:16px;
+ margin:2px;
+ cursor:pointer;
+ }
+
+hr {
+width:90%;
+border:0;
+border-bottom:2px solid #696969;
+margin:20px auto;
+}
+
+
+.copyright {
+text-align:center;
+}
+
+.underline {
+width:100%;
+height:4px;
+background:#DC143C;
+border-radius:3px;
+position:absolute;
+top:25px;
+left:0;
+}
+
+.underline span{
+width:15px;
+height:100%;
+background:#FFE4E1;
+border-radius:3px;
+position:absolute;
+top:0;
+left:10px;
+animation:moving 2s linear infinite;
+}
+
+@keyframes moving {
+0%{
+   left:-20px;
+}
+
+100%{
+   left:100px;
+}
+}
+
+
+@media (max-width:700px){
+footer {
+   bottom:unset;
+}
+.col {
+  flex-basis:100%;
+}
+.col:nth-child(2),.col:nth-child(3){
+flex-basis:100%;
+}
+}
+
+</style>
+
+
+<footer>
+<body>
+
+<div class="row">
+ <div class="col">
+   
+<h3>Useful Links<div class="underline"><span></span></div></h3>
+<ul>
+<li><a href="index.html"><Useful Links>Home</Useful Links></a></li>
+ <li><a href="About us.html"><Useful Links>About</Useful Links></a></li>
+ <li><a href="services.html"><Useful Links>Services</Useful Links></a></li>
+ <li><a href="infor.html"><Useful Links>Information</Useful Links></a></li>
+ <li><a href="quality.html"><Useful Links>Quality Policy</Useful Links></a></li>
+ <li><a href="form.html"><Useful Links>Contact</Useful Links></a></li>
+  </ul>
+</div>
+
+ 
+
+
+<div  class="col">
+<h3>Newsletter<div class="underline"><span></span></div> </h3>
+<form>
+   <input type="Email"  placeholder="Your Email Address" required>
+   <br>
+   <button type="submit"><i class="fas fa-arrow-right"></i></button>
+   </form>
+</div>
+  
+<div  class="col">
+<h3>Contact<div class="underline"><span></span></div></h3>
+<ul>
+   <li><p>Email: <a href="mailto:sigirijewellers@gmail.com" target="_top">sigirijewellers@gmail.com</p></a></li>
+   <li><p>Tel: <a href="tel:0252 247 617" target="_top">0252 247 617</p></a></li>
+   <li><p>Address: <a href="address:Main Street,Kahatagasdigiliya target="_top">Main Street,Kahatagasdigiliya</p></a></li><br>
+   <h4><em><u>Sitemap</em></u></h4>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.7533583493973!2d80.68427531482698!3d8.425865400463024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afc7d60b1406c67%3A0xa22fa9fe2fe950f2!2sSigiri%20Jwellers!5e0!3m2!1sen!2slk!4v1673239447766!5m2!1sen!2slk" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </ul>
+   </div>
+ 
+<div  class="col"> 
+<h3>Follow Us<div class="underline"><span></span></div></h3>  
+<div class="social-icons">
+<a href="https://web.facebook.com/people/Sigiri-Jewellers/100090691971538/?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+<a href="https://wa.me/+94769047384"  target="_blank"><i class="fa fa-whatsapp"></a></i>
+<a href="tel:0712 388407"><i class="fa fa-phone"></a></i>
+<a href="tel:0252 247 617"><i class="fa fa-tty"></a></i>
+</div>
+</div>
+</div>
+
+
+<hr>
+
+
+<p class="copyright"> &copy;All Copyright Received by Sigiri Jewellers</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>   

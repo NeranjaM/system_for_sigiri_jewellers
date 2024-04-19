@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<title>Sigiri Jewellers</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<style>
+ 
+
+img  {
+ display:block;
+ margin-left:auto;
+ margin-right:auto;
+ }
+
+.icons{
+ margin-left:2px;
+ word-spacing:2px;
+ position: absolute;
+}
+i:hover{
+    opacity:1;
+    cursor: pointer;
+}
+ 
+.alingside {
+	float:right;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0c0c0c;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color:#fofofo;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 26px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #f8f8f8;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+
+.menu-area ul  {
+list-style:none;
+}
+
+.menu-area {
+display:inline-block;
+text-align:center;
+position:absolute;
+top:90%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.menu-area li:hover  {
+background:#C0C0C0;
+}
+
+.menu-area > ul  {
+list-style:none;
+padding:0;
+margin:0;
+display:inline-block;
+background:#313131;
+color:#fff;
+}
+
+.menu-area > ul > li {
+position:relative;
+cursor:pointer;
+font-family:Arial, Helvetica, sans-serif;
+font-size:14px;
+letter-spacing:1px;
+float:left;
+width:100px;
+height:50px;
+line-height:50px;
+}
+
+.dropdown {
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+padding:0;
+}
+
+.dropdown li{
+background:#FAFAD2;
+display:none;
+}
+
+.dropdown li :hover {
+background:#029bd5;
+}
+
+.menu-area li:hover > .dropdown li {
+display:block;
+}
+
+.menu-area li:hover > .dropdown {
+perspective:1000px;
+}
+
+.menu-area li:hover > .dropdown li{
+transform-origin:top center;
+opacity:0;
+}
+
+.menu-area li:hover > .dropdown li:nth-child(1){
+ animation:animate 300ms ease-in-out forwards;
+ animation-delay:150ms;
+}
+
+.menu-area li:hover > .dropdown li:nth-child(2){
+ animation:animate 300ms ease-in-out forwards;
+ animation-delay:0ms;
+}
+
+.menu-area li:hover > .dropdown li:nth-child(3){
+ animation:animate 300ms ease-in-out forwards;
+ animation-delay:150ms;
+}
+
+.menu-area li:hover > .dropdown li:nth-child(4){
+ animation:animate 300ms ease-in-out forwards;
+ animation-delay:450ms;
+}
+
+.menu-area li:hover > .dropdown li:nth-child(5){
+ animation:animate 300ms ease-in-out forwards;
+ animation-delay:300ms;
+}
+
+.menu-area li:hover > .dropdown li:nth-child(6){
+ animation:animate 300ms ease-in-out forwards;
+ animation-delay:150ms;
+}
+
+.menu-area li:hover > .dropdown li:nth-child(7){
+ animation:animate 300ms ease-in-out forwards;
+ animation-delay:450ms;
+}
+
+@keyframes animate {
+0%{
+opacity:0;
+transform:rotateX(-90deg);
+}
+
+50%{
+transform:rotateX(20deg);
+}
+
+100% {
+opacity:1;
+transform:rotateX(0deg);
+}
+
+@media screen and (max-width:850px) {
+.menu-area {
+position:fixed;
+top:0;
+left:0;
+height:100vh;
+flex-direction:column;
+z-index:1000;
+}
+}
+
+.menu-area >li {
+line-height:6rem;
+}
+
+.dropdown    {
+position:initial;
+}
+
+.dropdown {
+display:none;
+}
+
+.menu-area li:hover >.dropdown {
+opacity:1;
+visibility:visible;
+max-height:initial;
+}
+
+nav-area a{
+folat:none;
+display:block;
+text-align:left;
+}
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="box">
+        <div class="barmanu">
+           <div class="icons">
+          <a href="https://web.facebook.com/people/Sigiri-Jewellers/100090691971538/?mibextid=ZbWKwL"> <i class="fa fa-facebook-square"></a></i>
+		  <a href="https://wa.me/+94769047384"  target="_blank"><i class="fa fa-whatsapp"></a></i>
+		  <a href="tel:0712 388407"><i class="fa fa-phone"></a></i>
+          <a href= "tel:0252 247 617"><i class="fa fa-tty"></a></i>
+		  <i class="fa fa-question-circle"></a></i>
+            </div>
+
+<div class="alingside">
+<i class="material-icons">search</i>
+<i class="material-icons">favorite</i>
+<i class="material-icons">shopping_cart</i>
+</div>
+<br><br>
+
+
+<img src="img/Shop name.jpg" align="Center" style="width:300px; height:200px">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">Home</a>
+  <a href="order.html">Customer Order</a>
+  <a href="infor.html">Information</a>
+  <a href="quality.html">Quality Policy</a>
+  <a href="form.html">Contact Us</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  </div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+<br><br>
+
+
+<div class="header">
+<video src="jewelim.mp4"  class="vid-bg"  align="Center" style="width:1500px; height:1000px" autoplay loop muted></video>
+</div>
+
+ 	<div class="menu-area">
+	  <ul>
+	  <li>Home</li>
+	 <li>Jewellary
+	    <ul class="dropdown">
+		<a href="earings.html"><li> <dropdown><b>Earing</dropdown></b></li></a>
+        <a href="pendent.html"><li><dropdown><b>Pendent</dropdown></b></li></a>
+		<a href="necklace.html"><li><dropdown><b>Bridal Necklace</dropdown></b></li></a>
+		<a href="ring.html"><li><dropdown><b>Ring</dropdown></b></li></a>
+		<a href="chain.html"><li><dropdown><b>Chain</dropdown></b></li></a>
+		<a href="bangle 1.html"><li><dropdown><b>Bangle</dropdown></b></li></a>
+		<a href="braceletnew.html"><li><dropdown><b>Bracelet</dropdown></b></li></a>
+		<a href="pancha.html"><li><dropdown><b>Panchayudha</dropdown></b></li></a>
+        </ul>
+		</li>
+		
+	<li>Offers
+	    <ul class="dropdown">
+		<a href="offer.html"><li> <dropdown><b><li>Offers</b></a></li>
+		
+	</ul>
+    </li>
+	
+	<li>Services
+	 <ul class="dropdown">
+	    <a href="selling.html"><li> <dropdown><b><li>Jewellary Selling</b></a></li>
+        <a href="jewmake.html"><li> <dropdown><b><li>Jewellary Making</b></a></li>
+        <a href="pawing.html"><li> <dropdown><b><li>Pawing</b></a></li>
+	</ul>
+    </li>
+	
+	<li>About
+	<ul class="dropdown">
+		<a href="About us.html"><li> <dropdown><b><li>About</b></a></li>
+		</ul>
+    </li>
+	</div>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color:white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+
+</style>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1 style="text-align:center"><u>Features</u></h1>
+
+
+
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection(' best seller')"> Best Seller</button>
+  <button class="btn" onclick="filterSelection('new arrival')"> New Arrival</button>
+ </div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column best seller">
+    <div class="content">
+      <img src="img/bangle 4.jpg" alt="Mountains" style="width:100%">
+     <h4 style="text-align:center;"><em><b>Bangle</em></b></h4>
+    </div>
+  </div>
+  <div class="column  best seller">
+    <div class="content">
+    <img src="img/bangle 4.jpg" alt="Lights" style="width:100%">
+      <h4 style="text-align:center;"><em><b>Bangle</em></b></h4>
+    </div>
+  </div>
+  <div class="column  Best Seller">
+    <div class="content">
+    <img src="img/bangle 5.jpg" alt="Nature" style="width:100%">
+      <h4 style="text-align:center;"><em><b>Bangle</em></b></h4>
+      </div>
+  </div>
+  
+  <div class="column new arrival">
+    <div class="content">
+      <img src="img/pendent 1.jpg" alt="Car" style="width:100%">
+      <h4 style="text-align:center;"><em><b>Pendent</em></b></h4>
+     </div>
+  </div>
+  <div class="column new arrival">
+    <div class="content">
+    <img src="img/pendent 2.jpg" alt="Car" style="width:100%">
+      <h4 style="text-align:center;"><em><b>Pendent</em></b></h4>
+      </div>
+  </div>
+ 
+
+
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<hr>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+*{
+margin:0;
+padding:0;
+font-family:Arial;
+box-sizing:border-box;
+}
+
+.footer{
+width:100%;
+position:absolute;
+bottom:0;
+background:#333;
+color:#fff;
+padding:100px 0 30px;
+border-top-left-radius:125px;
+font-size:13px;
+line-height:20px;
+}
+
+.row {
+width:85%;
+margin:auto;
+display:flex;flex-wrap:wrap;
+align-items:flex-start;
+justify-content:space-between;
+}
+
+.col {
+flex-basis:20%;
+padding:10px;
+}
+
+.col:nth-child(2),.col:nth-child(3){
+flex-basis:15%;
+}
+
+.col h3 {
+width:fit-content;
+margin-bottom:40px;
+position:relative;
+}
+
+ul li {
+list-style:none;
+margin-bottom:12px;
+}
+
+ul li a {
+text-decoration:none;
+color:#000000;
+}
+
+form {
+padding-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid #ccc;
+margin-bottom:50px;
+}
+
+form input {
+width:100%;
+background:transparent;
+color:#ccc;
+border:0;
+outline:none;
+}
+
+form button {
+background:transparent;
+border:0;
+outline:none;
+cursor:pointer;
+}
+
+form button .fas{
+font-size:15px;
+color:#ccc;
+}
+
+social-icons {
+ margin-top:30px;
+}
+
+.social-icons i {
+ font-size:16px;
+ margin:2px;
+ cursor:pointer;
+ }
+
+hr {
+width:90%;
+border:0;
+border-bottom:2px solid #696969;
+margin:20px auto;
+}
+
+.copyright {
+text-align:center;
+}
+
+.underline {
+width:100%;
+height:4px;
+background:#DC143C;
+border-radius:3px;
+position:absolute;
+top:25px;
+left:0;
+}
+
+.underline span{
+width:15px;
+height:100%;
+background:#FFE4E1;
+border-radius:3px;
+position:absolute;
+top:0;
+left:10px;
+animation:moving 2s linear infinite;
+}
+
+@keyframes moving {
+0%{
+   left:-20px;
+}
+
+100%{
+   left:100px;
+}
+}
+
+
+@media (max-width:700px){
+footer {
+   bottom:unset;
+}
+.col {
+  flex-basis:100%;
+}
+.col:nth-child(2),.col:nth-child(3){
+flex-basis:100%;
+}
+}
+
+</style>
+
+
+<footer>
+<body>
+
+<div class="row">
+ <div class="col">
+   
+<h3>Useful Links<div class="underline"><span></span></div></h3>
+<ul>
+<li><a href="index.html"><Useful Links>Home</Useful Links></a></li>
+ <li><a href="About us.html"><Useful Links>About</Useful Links></a></li>
+ <li><a href="services.html"><Useful Links>Services</Useful Links></a></li>
+ <li><a href="infor.html"><Useful Links>Information</Useful Links></a></li>
+ <li><a href="quality.html"><Useful Links>Quality Policy</Useful Links></a></li>
+ <li><a href="form.html"><Useful Links>Contact</Useful Links></a></li>
+  </ul>
+</div>
+
+ 
+
+
+<div  class="col">
+<h3>Newsletter<div class="underline"><span></span></div> </h3>
+<form>
+   <input type="Email"  placeholder="Your Email Address" required>
+   <br>
+   <button type="submit"><i class="fas fa-arrow-right"></i></button>
+   </form>
+</div>
+  
+<div  class="col">
+<h3>Contact<div class="underline"><span></span></div></h3>
+<ul>
+   <li><p>Email: <a href="mailto:sigirijewellers@gmail.com" target="_top">sigirijewellers@gmail.com</p></a></li>
+   <li><p>Tel: <a href="tel:0252 247 617" target="_top">0252 247 617</p></a></li>
+   <li><p>Address: <a href="address:Main Street,Kahatagasdigiliya target="_top">Main Street,Kahatagasdigiliya</p></a></li><br>
+   <h4><em><u>Sitemap</em></u></h4><br>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.7533583493973!2d80.68427531482698!3d8.425865400463024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afc7d60b1406c67%3A0xa22fa9fe2fe950f2!2sSigiri%20Jwellers!5e0!3m2!1sen!2slk!4v1673239447766!5m2!1sen!2slk" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   
+   </ul>
+   </div>
+ 
+<div  class="col"> 
+<h3>Follow Us<div class="underline"><span></span></div></h3>  
+<div class="social-icons">
+<a href="https://web.facebook.com/people/Sigiri-Jewellers/100090691971538/?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+<a href="https://wa.me/+94769047384"  target="_blank"><i class="fa fa-whatsapp"></a></i>
+<a href="tel:0712 388407"><i class="fa fa-phone"></a></i>
+<a href="tel:0252 247 617"><i class="fa fa-tty"></a></i>
+</div>
+</div>
+</div>
+
+
+<hr>
+
+
+<p class="copyright"> &copy;All Copyright Received by Sigiri Jewellers</p>
+</footer>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+
+
+ 

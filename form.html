@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body {
+background-position:center center;
+background-image:url("img/golden-sparkles.jpg");
+height:100vh;
+font-family:Arival;
+font-weight:200;
+font-size:16px
+}
+
+a {
+text-decoration:none;
+}
+
+header {
+height:30px;
+width:100%;
+background-color:#778899;
+border-radius:3px;
+margin:30px 0px;
+display:-webkit-flex;
+display:-moz-flex;
+display:-ms-flex;
+display:-o-flex;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px  50px;
+}
+
+.nav-area {
+list-style:none;
+position:absolute;
+}
+
+.nav-area li {
+display:inline-block;
+padding:0 20px;
+text-transform:uppercase;
+}
+
+.nav-area li a {
+transition:3s;
+color:#fff;
+}
+
+.nav-area li a:hover{
+color:#FFD700;
+}
+
+.nav-area.a active {
+background-color:#556B2F;
+color:black;
+}
+
+.btn-area {
+cursor:pointer;
+color:#fff;
+font-size:16px;
+letter-spacing:2px;
+text-transform:uppercase;
+padding:10px 30px;
+border-radius:5px;
+background:#A52A2A;
+}
+
+@media screen and (max-width:600px) {
+nav-area  {position:relative;}
+nav-area.icon {
+position:absolute;
+right:0;
+top:0;
+}
+
+nav-area a{
+folat:none;
+display:block;
+text-align:left;
+}
+
+ 
+  
+.form {
+position:absolute;
+top:50%;
+left:0;
+transform:translate(-50%, -50%);
+width:600px;
+background:#fff;
+border-radius:5px;
+text-align:center;
+padding:30px 30px 10px 30px;
+box-shadow:0px 5px 20px 10px  rgba(0,0,0,0.3);
+}
+
+.form form {
+margin:40px 0;
+}
+ 
+form .field {
+width:100%;
+margin-bottom:20px;
+}
+
+/* Center and scale the image nicely */
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+position:relative;
+}
+ 
+/* Add styles to the form container */
+ .container {
+ position: absolute;
+ right:50%;
+ margin:40px
+ max-width:300px;
+ padding:20px;
+ background-color:white;
+ }
+ 
+ /* Full-width input fields */
+ input[type=text], input[type=tel] {
+ width:100%;
+ padding:15px;
+ margin:5px  0 22px  0;
+ border:none;
+ background:#f1f1f1;
+ }
+ 
+ input[type=text]:focus,
+ input[type=tel]:focus  {
+ background-color:#ddd;
+ outline:none;
+ }
+ 
+ /* Set a style for the submit */
+ .btn  {
+ background-color:#04AA6D;
+ color:white;
+ padding:10px 12px;
+ border:none;
+ cursor:pointer;
+ width:100%;
+ opacity:0.9;
+}
+ 
+ .btn:hover  {
+ opacity:1;
+ }
+
+</style>
+ </head>
+ <body>
+ 
+ 
+ <header>
+	<nav>
+	  <ul class="nav-area">
+	  <li><a href="index.html"><b>Home</b></a></li>
+	  <li><a href="index.html"><b>Jewelary</b></a></li>
+	  <li><a href="offer.html"><b>Offers</b></a></li>
+	  <li><a href="services.html"><b>Service</b></a></li>
+	  <li><a href="About us.html"><b>About</b></a></li>
+	  </ul>
+	  </nav>
+	  </header>
+	  
+	  <div class="container">
+ <h2 style="text-align:center; color:blue ">Send Your Comments...</h2><br>
+  <form action="submit.php"  Method="POST">
+  
+ 
+	
+	<label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required><br>
+	
+	<label for="tel"><b>Tel No</b></label>
+    <input type="tel" placeholder="Enter tel" name="tel" required><br>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required><br>
+
+    <label for="cmt"><b>Comment</b></label>
+    <input type="text" placeholder="Enter comment" name="cmt" required><br>
+
+    
+	<div class="input_field">
+    <input type="submit" value="Send" class="btn" name="send">
+	</div>
+</form>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
